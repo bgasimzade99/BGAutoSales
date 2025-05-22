@@ -1,0 +1,65 @@
+/* style.css */
+
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 15px rgba(255, 255, 255, 0.2);
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1);
+}
+@media (max-width: 640px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .lang-select {
+    margin-top: 0.5rem;
+  }
+}
+.hero-section {
+  background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url('images/interior.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.product-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-card:hover::after {
+  content: "→ Explore";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+.nav-link.active {
+  color: #38bdf8; /* Tailwind sky-400 */
+  text-shadow: 0 0 5px rgba(56, 189, 248, 0.6);
+}
+.add-btn {
+  background-color: #38bdf8;
+  color: white;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 6px;
+  margin-top: 8px;
+  transition: background 0.3s;
+}
+.add-btn:hover {
+  background-color: #0ea5e9;
+}

@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Auto Accessory Shop</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="bg2.png" />
+
+</head>
+<body class="bg-black text-white font-sans transition duration-500">
+
+  <!-- Header -->
+<header class="p-6 flex flex-wrap justify-between items-center gap-4">
+  <div class="flex items-center gap-3">
+  <img src="car.jpg" alt="BGAutoSales Logo" class="h-12 w-auto" />
+  <h1 class="text-2xl font-bold text-white">BGAutoSales</h1>
+</div>
+
+
+  <div class="flex items-center gap-4 w-full sm:w-auto">
+    <!-- Search Bar -->
+    <input
+      type="text"
+      id="search"
+      placeholder="Search categories..."
+      class="px-4 py-2 rounded-md border border-gray-500 text-black focus:outline-none focus:ring-2 focus:ring-blue-500 transition w-60"
+    />
+
+    <!-- Navigation Links -->
+    <nav class="space-x-4 text-sm">
+      <a href="#" class="hover:underline shadow-sm hover:shadow-md transition">Home</a>
+      <a href="#" class="hover:underline shadow-sm hover:shadow-md transition">Products</a>
+      <a href="#" class="hover:underline shadow-sm hover:shadow-md transition">Contact</a>
+    </nav>
+<select id="language-switcher" class="border px-3 py-1 rounded text-sm bg-black text-white">
+  <option value="en">EN</option>
+  <option value="tr">TR</option>
+  <option value="az">AZ</option>
+</select>
+
+
+
+  </div>
+</header>
+
+
+ 
+  <!-- Hero Section -->
+  <section class="text-center py-20 bg-cover bg-center" style="background-image: url('images/interior.jpg');">
+    <h2 class="text-4xl font-bold">UPGRADE YOUR DRIVE</h2>
+    <button class="mt-6 px-6 py-3 bg-white text-black font-semibold rounded hover:bg-gray-300 transition">
+      SHOP ACCESSORIES
+    </button>
+  </section>
+  
+
+ <!-- Category Grid -->
+<section id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-10">
+  <a href="perfume.html" class="block product-card bg-zinc-900 p-4 rounded shadow text-center hover:scale-105 transition">
+  <img src="perfume1.jpg" alt="Car Perfumes" class="w-full h-40 object-cover rounded mb-4" />
+  <h3 class="text-lg font-semibold">Car Perfumes</h3>
+  <p class="text-sm text-gray-400">Aromatic fragrances</p>
+</a>
+
+  </div>
+
+  <div class="product-card bg-zinc-900 p-4 rounded shadow text-center transition-transform duration-300 hover:scale-105">
+    <a href="category.html?type=wipers">
+      <img src="wiepers.jpg" alt="Wipers" class="w-full h-40 object-cover rounded mb-4" />
+      <h3 class="text-lg font-semibold">Wipers</h3>
+      <p class="text-sm text-gray-400">For all sizes and models</p>
+    </a>
+  </div>
+
+  <div class="product-card bg-zinc-900 p-4 rounded shadow text-center transition-transform duration-300 hover:scale-105">
+    <a href="category.html?type=accessories">
+      <img src="acces.jpg" alt="Accessories" class="w-full h-40 object-cover rounded mb-4" />
+      <h3 class="text-lg font-semibold">Accessories</h3>
+      <p class="text-sm text-gray-400">Unique car upgrades</p>
+    </a>
+  </div>
+
+  <div class="product-card bg-zinc-900 p-4 rounded shadow text-center transition-transform duration-300 hover:scale-105">
+    <a href="category.html?type=carpets">
+      <img src="carpets.jpg" alt="Carpets" class="w-full h-40 object-cover rounded mb-4" />
+      <h3 class="text-lg font-semibold">Carpets</h3>
+      <p class="text-sm text-gray-400">Comfort and luxury mats</p>
+    </a>
+  </div>
+  <div class="product-card bg-zinc-900 p-4 rounded shadow text-center transition-transform duration-300 hover:scale-105">
+    <a href="category.html?type=Carcare">
+      <img src="carce.jpg" alt="Car Care" class="w-full h-40 object-cover rounded mb-4" />
+      <h3 class="text-lg font-semibold">Car Care </h3>
+      <p class="text-sm text-gray-400">Worlwide Brands</p>
+    </a>
+  </div>
+</section>
+
+
+  <!-- JavaScript -->
+  
+  <script>
+  const languageSwitcher = document.getElementById('language-switcher');
+
+  const translations = {
+    en: {
+      "UPGRADE YOUR DRIVE": "UPGRADE YOUR DRIVE",
+      "SHOP ACCESSORIES": "SHOP ACCESSORIES",
+      "Car Perfumes": "Car Perfumes",
+      "Aromatic fragrances": "Aromatic fragrances",
+      "Wipers": "Wipers",
+      "For all sizes and models": "For all sizes and models",
+      "Accessories": "Accessories",
+      "Unique car upgrades": "Unique car upgrades",
+      "Carpets": "Carpets",
+      "Premium comfort": "Premium comfort"
+     
+    },
+    tr: {
+      "UPGRADE YOUR DRIVE": "SÜRÜŞÜNÜ GELİŞTİR",
+      "SHOP ACCESSORIES": "AKSESUARLARI GÖR",
+      "Car Perfumes": "Araba Parfümleri",
+      "Aromatic fragrances": "Aromatik kokular",
+      "Wipers": "Silecekler",
+      "For all sizes and models": "Tüm boyutlar ve modeller",
+      "Accessories": "Aksesuarlar",
+      "Unique car upgrades": "Benzersiz araba aksesuarları",
+      "Carpets": "Paspaslar",
+      "Premium comfort": "Konfor ve lüks"
+      
+    },
+    az: {
+      "UPGRADE YOUR DRIVE": "SÜRÜŞÜNÜ YENİLƏ",
+      "SHOP ACCESSORIES": "AKSESUARLARA BAX",
+      "Car Perfumes": "Avtomobil Ətriləri",
+      "Aromatic fragrances": "Ətirli qoxular",
+      "Wipers": "Şüşəsilənlər",
+      "For all sizes and models": "Bütün ölçülər və modellər üçün",
+      "Accessories": "Aksesuarlar",
+      "Unique car upgrades": "Fərqli avtomobil əlavələri",
+      "Carpets": "Xalçalar",
+      "Premium comfort": "Yüksək rahatlıq"
+    }
+  };
+
+  function updateText(lang) {
+    document.querySelectorAll("*").forEach(el => {
+      if (el.childNodes.length === 1 && el.childNodes[0].nodeType === 3) {
+        const original = el.textContent.trim();
+        for (const key in translations.en) {
+          if (original === translations.en[key] || original === translations.tr[key] || original === translations.az[key]) {
+            el.textContent = translations[lang][key];
+          }
+        }
+      }
+    });
+  }
+
+  languageSwitcher.addEventListener('change', (e) => {
+    const lang = e.target.value;
+    updateText(lang);
+  });
+</script>
+
+<script>
+    // Search filter
+    const searchInput = document.getElementById('search');
+    searchInput.addEventListener('keyup', () => {
+      const keyword = searchInput.value.toLowerCase();
+      document.querySelectorAll('.product-card').forEach(card => {
+        const text = card.innerText.toLowerCase();
+        card.style.display = text.includes(keyword) ? 'block' : 'none';
+      });
+    });
+
+    // Cart logic
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartCount = document.getElementById('cart-count');
+    function updateCartDisplay() {
+      cartCount.innerText = cart.length;
+    }
+    function addToCart(item) {
+      cart.push(item);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartDisplay();
+    }
+    updateCartDisplay();
+  </script>
+  <footer class="bg-zinc-900 text-gray-300 px-6 py-10 mt-10">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+    <!-- Contact Info -->
+    <div>
+      <h2 class="text-lg font-semibold text-white mb-2">Contact</h2>
+      <p>📞 +994 50 411 99 99</p>
+      <p>📧 gasimzadababak@gmail.com</p>
+    </div>
+
+    <!-- Social Media -->
+    <div>
+      <h2 class="text-lg font-semibold text-white mb-2">Follow Us</h2>
+      <p>
+        <a href="https://instagram.com/bgautosales" target="_blank" class="hover:underline text-blue-400">
+          📸 Instagram
+        </a>
+      </p>
+      <p>
+        <a href="https://wa.me/994504119999" target="_blank" class="hover:underline text-green-400">
+          💬 WhatsApp
+        </a>
+      </p>
+    </div>
+
+    <!-- Company Info -->
+    <div>
+      <h2 class="text-lg font-semibold text-white mb-2">BGAutoSales</h2>
+      <p>Your trusted car accessories & parts store.</p>
+      <p>Serving Azerbaijan📍Sumgait Car Market </p>
+      
+    </div>
+  </div>
+
+  <div class="text-center text-sm text-gray-500 mt-10 border-t pt-4">
+    &copy; 2025 BGAutoSales. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>
