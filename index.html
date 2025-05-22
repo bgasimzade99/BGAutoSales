@@ -15,6 +15,16 @@
 
 </head>
 <body class="bg-black text-white font-sans transition duration-500">
+<!-- Fullscreen Loading Screen -->
+<div id="loading-screen" class="fixed inset-0 bg-black flex flex-col items-center justify-center z-50">
+  <!-- Larger GIF -->
+  <img src="logo5.gif" alt="Loading Car" class="w-72 h-72 object-contain mb-6" />
+  
+  <!-- Logo -->
+  <img src="bg2.png" alt="BGAutoSales Logo" class="w-40 opacity-0 transition-opacity duration-1000" id="logo" />
+</div>
+
+
 
   <!-- Header -->
 <header class="p-6 flex flex-wrap justify-between items-center gap-4">
@@ -266,6 +276,42 @@ We work closely with trusted dealerships and proudly supply clients across the r
     &copy; 2025 BGAutoSales. All rights reserved.
   </div>
 </footer>
+<script>
+  window.addEventListener('load', () => {
+    const logo = document.getElementById('logo');
+    const loadingScreen = document.getElementById('loading-screen');
+
+    // Show logo after car animation
+    setTimeout(() => {
+      logo.classList.remove('opacity-0');
+    }, 2000);
+
+    // Hide loading screen after 4 seconds
+    setTimeout(() => {
+      loadingScreen.style.display = 'none';
+    }, 4000);
+  });
+</script>
+<script>
+  window.addEventListener('load', () => {
+    const logo = document.getElementById('logo');
+    const loadingScreen = document.getElementById('loading-screen');
+
+    // Fade in the logo after a short delay
+    setTimeout(() => {
+      logo.classList.remove('opacity-0');
+    }, 1500);
+
+    // Hide the whole loading screen after a few seconds
+    setTimeout(() => {
+      loadingScreen.style.display = 'none';
+    }, 3500);
+  });
+  setTimeout(() => {
+  logo.classList.add('fade-in');
+}, 1500);
+
+</script>
 
 </body>
 </html>
